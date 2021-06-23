@@ -28,7 +28,7 @@ Now things are a little more simplified and direct. The user (probably you) woul
 - Add VPN support between Command and Nodes
 - Some kind of logging
 
-#### How-to
+### How-to
 1. Add the following variables to `proxycannon.tfvars` before running
     - Private SSH Key File Location to `variable key-file`
     - Public Key Name (for VPS of Choice) to `variable sshName`
