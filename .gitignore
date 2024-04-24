@@ -1,4 +1,7 @@
 *.tfstate
 *.tfstate.backup
 *.routecmd
-.terraform
+.terraform/
+
+# Don't push tfvars files because they could contain sensitive values
+*.tfvars
