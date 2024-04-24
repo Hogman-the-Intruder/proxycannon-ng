@@ -15,14 +15,6 @@ variable "sshName" {
 		default = ""
 }
 
-variable "awsAccessKey" {
-	default = ""
-}
-
-variable "awsSecretKey" {
-	default = ""
-}
-
 variable "isAWS" {
     type = bool
     default = false

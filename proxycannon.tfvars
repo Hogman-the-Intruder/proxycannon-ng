@@ -5,9 +5,3 @@ key-file = ""
 # sshName should be the name used in your virtual platform of choice
 sshName = ""
 
-# Uncomment for AWS
-# awsAccessKey = ""
-# awsSecretKey = ""
-
-# Uncomment for Digital Ocean
-# do_token = ""
