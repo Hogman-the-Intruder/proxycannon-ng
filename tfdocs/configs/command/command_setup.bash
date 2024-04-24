@@ -2,13 +2,15 @@
 # proxycannon
 #
 
+set -e # exit on error
+
 ###################
 # install software
 ###################
 # update and install deps
-apt update
+apt update -y -qq
 export DEBIAN_FRONTEND=noninteractive
-apt -y upgrade
+apt -y -qq upgrade
 
 vpsID=$1
 
