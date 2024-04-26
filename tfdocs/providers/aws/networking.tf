@@ -7,7 +7,7 @@ module "proxycannon-vpc" {
   version = "5.6.0"
 
   name = "proxycannon-vpc"
-  cidr = "10.0.0.0/16"
+  cidr = var.vpc_cidr
 
   azs             = data.aws_availability_zones.azs.names
   public_subnets  = slice(local.subnets, 0, length(data.aws_availability_zones.azs.names))

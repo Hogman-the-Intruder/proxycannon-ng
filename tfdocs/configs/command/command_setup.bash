@@ -36,6 +36,7 @@ cp /tmp/client-server.conf /etc/openvpn/client-server.conf
 cp /tmp/proxycannon-client.conf ~/proxycannon-client.conf
 
 # setup ca and certs
+export EASYRSA_BATCH=1
 mkdir /etc/openvpn/ccd
 make-cadir /etc/openvpn/easy-rsa
 cd /etc/openvpn/easy-rsa/
@@ -99,7 +100,7 @@ case $vpsID in
   1 ) # for digitalocean
   iptables -t nat -A POSTROUTING -o eth1 -j MASQUERADE
   ;;
-  2 ) # for aws
-  iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
+  2 ) # for aws - ARM64 Ubuntu 22.04 (TODO add options for x86 eth0 interface)
+  iptables -t nat -A POSTROUTING -o ens5 -j MASQUERADE
   ;;
 esac

@@ -1,7 +1,16 @@
 *.tfstate
 *.tfstate.backup
+*.tfvars
 *.routecmd
-.terraform/
+.terraform
 
 # Don't push tfvars files because they could contain sensitive values
 *.tfvars
+
+# Only use a .ssh/ dir in local project for testing!!!
+.ssh/
+
+# Don't push conpack or environment-specific files (unless you really want to idrc)
+connection-pack*
+conpack*
+tfdocs/configs/command/node_addresses.txt
